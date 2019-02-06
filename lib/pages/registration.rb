@@ -2,14 +2,17 @@ require 'capybara/dsl'
 
 class Registration
   include Capybara::DSL
-
+  num = rand(5..6)
   #page object
   REGISTRATION_PAGE_URL = 'http://localhost:9292/'
   FIRST_NAME_FIELD_ID = 'firstName'
   LAST_NAME_FIELD_ID = 'lastName'
   AGE_FIELD = '/html/body/div/form/div[3]/div/input'
   DOB_FIELD = 'dob'
-  GENDER_BTN = '/html/body/div/form/div[6]/label/text()'
+  GENDER_BTN = "/html/body/div/form/div[#{num}]"
+  DEGREE_FIELD = "/html/body/div/form/div[7]/div/input"
+  UNIVERSITY_BOX = 'inputUni'
+  UNI = 'University of Oxford'
 
  
 
@@ -34,8 +37,15 @@ class Registration
   end
 
   def check_gender_btn
-    num = rand(5..6)
-    find(:xpath,"/html/body/div/form/div[#{num}]/label").click
+    find(:xpath,GENDER_BTN).click
+  end
+
+  def fill_degree_field(deg)
+    find(:xpath,DEGREE_FIELD).set(deg)
+  end
+
+  def select_university
+    select(UNI, :from => UNIVERSITY_BOX)
   end
 
 
