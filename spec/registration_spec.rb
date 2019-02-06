@@ -21,14 +21,9 @@ describe 'testing a correct path for sparta registration' do
    @sparta_demo_site.registration_page.fill_in_skills_field('Saying my name jeff')
    @sparta_demo_site.registration_page.fill_in_phone_field('01268792810')
    @sparta_demo_site.registration_page.fill_linkedin_field('linkedin.com')
-   @sparta_demo_site.registration_page.check_gender_btn
    @sparta_demo_site.registration_page.check_tandc_btn
    @sparta_demo_site.registration_page.click_signin_btn
-   #@sparta_demo_site.registration_page.set_slider
    sleep 10
   end
 
 end
-
-
-

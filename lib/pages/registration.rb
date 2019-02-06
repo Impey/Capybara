@@ -9,7 +9,7 @@ class Registration
   AGE_FIELD = '/html/body/div/form/div[3]/div/input'
   DOB_FIELD = 'dob'
   num = rand(5..6)
-  GENDER_BTN = "/html/body/div/form/div[#{num}]"
+  GENDER_BTN = '/html/body/div/form/div[6]/label'
   DEGREE_FIELD = '/html/body/div/form/div[7]/div/input'
   UNIVERSITY_BOX = 'inputUni'
   UNI = 'University of Oxford'
@@ -50,7 +50,7 @@ class Registration
   end
 
   def check_gender_btn
-    find(:xpath,GENDER_BTN).click
+    find(:xpath,'/html/body/div/form/div[6]/label').click
   end
 
   def fill_degree_field(deg)
@@ -108,10 +108,4 @@ class Registration
   def click_signin_btn
     find(:xpath,SIGNIN_BTN).click
   end
-
-
-
-
- 
-
 end
