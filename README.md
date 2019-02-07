@@ -7,5 +7,6 @@ The purpose of this homework was to become familiar with capybara by testing a s
 
 ### Challenges 
 1. Targeting the slider bar to change the value
+2. My gender selection test does not work anymore randomly and i dont know why will need to be fixed
 
 
